@@ -1,0 +1,18 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{if results}
+%{
+doc = results.asXml()
+}%
+<ul>
+#{list doc.entry}
+<li>
+    ${_.content.raw()}
+</li>
+#{/list}
+</ul>
+#{/if}
+#{else}
+No results
+#{/else}
