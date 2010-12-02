@@ -4,7 +4,8 @@
 
 # Home page
 GET     /                                       Application.index
-
+GET		/search/{search}						Application.search
+POST	/search									Application.postSearch
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 

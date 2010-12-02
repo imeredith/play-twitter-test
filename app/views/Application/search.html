@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{form @Application.postSearch(), id:'search-form'}
+<label for='search'>Search for</label>
+<input id='search' name='search' value='${search}' type="text"/>
+<input type="submit" value='Go'/>
+#{/form}
+#{if results}
+<div id="results">
+	%{
+	doc = results.asXml()
+	}%
+	<table>
+		#{list doc.entry}
+		<tr class="entry">
+		<td>
+			<a href="${_.author.uri}">${_.author.name}</a>
+			</td>
+		<td>
+		    ${_.content.raw()}
+		</td>
+		</tr>
+		#{/list}
+	</table>
+</div>
+#{/if}
+
+#{else}
+No results
+#{/else}

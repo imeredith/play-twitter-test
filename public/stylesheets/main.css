@@ -1,0 +1,19 @@
+.entry {
+	margin: 5px 5px 5px 5px;
+	border-width:3px;
+	background-color: #ccffff;
+}
+#results, #search-form {
+	background-color: #dcfff3;
+	width:1000px;
+	margin:0 auto;
+	padding: 5px;
+}
+#results li{
+	list-style:none;
+}
+.page {
+	
+	
+	background-color:#66CCCC
+}
