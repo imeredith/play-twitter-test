@@ -13,7 +13,11 @@
 	list-style:none;
 }
 .page {
-	
-	
+
 	background-color:#66CCCC
+}	
+	body {
+    color: #444;
+    font: 14px "Droid Sans",arial,helvetica,sans-serif;
+    line-height: 1.5em;
 }
